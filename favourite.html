@@ -7,12 +7,60 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<style>
-		img 
+		.part 
 		{
-			width: 300px;
-			height: 70px;
-			float: right;
-			border-radius: 12px;
+			background-color: lightgoldenrodyellow;
+			border-radius: 5px;
+			padding: 5px 15px;
+			margin-top: 15px;
+			border: 2px dashed purple;
+		}
+		.column 
+		{
+		    position: relative;
+		    overflow: hidden;
+		    border-radius: 16px;
+		}
+		.column img
+		{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		.row::after 
+		{
+		    content: "";
+		    clear: both;
+		    display: table;
+		}
+		.row 
+		{
+		    display: grid;
+		    grid-template-columns: repeat(3, 1fr);
+		    gap: 20px;
+		}
+		.overlay 
+		{
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    padding: 12px;
+		    background: rgba(0, 0, 0, 0.55);
+		    color: white;
+		    text-align: center;
+		    font-size: 1rem;
+		    opacity: 0;
+		    transition: 0.3s ease;
+		}
+		.column:hover .overlay 
+		{
+		    opacity: 1;
+		}
+		p, ol 
+		{
+			font-size: 20px;
 		}
 		hr.dashed {
 		    border-top: 4px dashed mediumpurple;
@@ -33,42 +81,83 @@
   		<li><a href="favourite.html">Favourite</a></li>
 	</ul>
 
-
-	<h2>Falling for Life in Yellow</h2>
-	<p style="background-color: lightyellow;"><img src="animation/yellow.gif">Of the many colors that exist, the one that catches my eye the most is yellow. I like it because it's bright and shiny. I also learned about the symbolism of the color yellow. It is said that <q>yellow represents joy, optimism, and intellectual energy. It symbolizes the warmth of friendship, the excitement of new ideas, and the confidence that comes from mental clarity.</q> Indirectly, it makes me love things like sunsets and sunflowers. This color can give me the peace and new energy that I need when I am under stress. In addition, this color can be combined with any color and it becomes beautiful and stylish. For example, yellow and purple.</p>
+	<div class="part">
+	  <h2>Falling for Life in Yellow</h2>
+	  <p style="line-height: 30px;"><img src="animation/yellow.gif" alt="Yellow Flower" style="float: right; height: 150px;">Of the many colors that exist, the one that catches my eye the most is yellow. I like it because it's bright and shiny. I also learned about the symbolism of the color yellow. It is said that <q>yellow represents joy, optimism, and intellectual energy. It symbolizes the warmth of friendship, the excitement of new ideas, and the confidence that comes from mental clarity.</q> Indirectly, it makes me love things like <ins>sunsets and sunflowers</ins>. This color can give me the peace and new energy that I need when I am under stress. In addition, this color can be combined with any color and it becomes beautiful and stylish. For example, yellow and purple.</p>
+	</div>
 	<hr class="dashed">
 
-	<h2>My Favourite Bites & Sips</h2>
-	<p>There are 3 foods that I often order at restaurants:</p>
-	<ol>
-		<li>Mee Goreng Basah</li>
-		<li>Mee Ladna</li>
-		<li>Nasi Goreng Pattaya</li>
-	</ol>
+	<div class="part">
+	  <h2>My Favourite Bites & Sips</h2>
+	  <p>There are 3 foods that I often order at restaurants:</p>
+	  <ol>
+		  <li>Mee Goreng Basah</li>
+		  <li>Mee Ladna</li>
+		  <li>Nasi Goreng Pattaya</li>
+	  </ol>
 
-	<p>As for drinks, what I like to order is:</p>
-	<ol>
-		<li>Apple Juice</li>
-		<li>Lime Syrup Ice</li>
-		<li>Iced Tea</li>
-	</ol>
+	  <p>As for drinks, what I like to order is:</p>
+	  <ol>
+		  <li>Apple Juice</li>
+		  <li>Lime Syrup Ice</li>
+		  <li>Iced Tea</li>
+	  </ol>
+    </div>
 	<hr class="dashed">
 
-	<h2>My Kind of Music</h2>
-	<p>I started liking these singer groups not because of their looks but because of their songs, whether they are male or female. Most of them are from k-pop. I have realised i have liked some song with dreamy vibe. For girl groups, I am currently liking:</p>
-	<ol type="i">
-		<li>APINK: sinced 2014</li>
-		<li>GFRIEND: sinced 2019</li>
-		<li>IL-LIT: just recently</li>
-	</ol>
+    <div class="part">
+	  <h2>My Kind of Music</h2>
+	  <p>I started liking these singer groups not because of their looks but because of their songs, whether they are male or female. Most of them are from k-pop. I have realised i have liked some song with dreamy vibe. For girl groups, I am currently liking:</p>
+	  <div class="row">
+	  <div class="column">
+	    <img src="image/apink.jpg" alt="Apink" style="width:100%">
+	    <div class="overlay">APINK</div>
+	  </div>
+	  <div class="column">
+	    <img src="image/gfriend1.jpg" alt="Gfriend" style="width:100%">
+	    <div class="overlay">GFRIEND</div>
+	  </div>
+	  <div class="column">
+	    <img src="image/illit.jpg" alt="Illit" style="width:100%">
+	    <div class="overlay">IL-LIT</div>
+	  </div>
+	  </div>
+	  <ol type="i">
+		  <li>APINK: sinced 2014</li>
+		  <li>GFRIEND: sinced 2019</li>
+		  <li>IL-LIT: just recently</li>
+	  </ol>
 
-	<p>For boy groups, I am currently liking:</p>
-	<ol type="a ">
-		<li>GOT7: sinced 2017</li>
-		<li>SEVENTEEN: sinced 2023</li>
-		<li>EN-HYPEN: sinced 2024</li>
-	</ol>
+	  <p>To be honest, I don't listen to boy band songs as much as girl band songs. So, I don't have a specific type of song that I like. For boy groups, I am currently liking:</p>
+	  <div class="row">
+	  <div class="column">
+	    <img src="image/got7.jpg" alt="GOT7" style="width:100%">
+	    <div class="overlay">GOT7</div>
+	  </div>
+	  <div class="column">
+	    <img src="image/seventeen.jpg" alt="17" style="width:100%">
+	    <div class="overlay">SEVENTEEN</div>
+	  </div>
+	  <div class="column">
+	    <img src="image/enhypen.jpg" alt="ENHYPEN" style="width:100%">
+	    <div class="overlay">EN-HYPEN</div>
+	  </div>
+	  </div>
+	  <ol type="a">
+		  <li>GOT7: sinced 2017</li>
+		  <li>SEVENTEEN: sinced 2023</li>
+		  <li>EN-HYPEN: sinced 2024</li>
+	  </ol>
+    </div>
 	<hr class="dashed">
+
+	<div class="part">
+	  <p>Let's listen to one of my favorite songs!</p>
+	  <audio controls>
+		<source src="audio/Pimple.mp3" type="audio/mp3">
+			Your browser does not support audio element
+	  </audio>
+    </div>
 
 </body>
 </html>
